@@ -16,7 +16,12 @@ window.onload = function iniciar() {
     document.addEventListener("keydown", keyPush)
 
     // executa a função a cada 80 mms
-    setInterval(jogo, 80)
+    if (screen.width < 400) {
+        setInterval(jogo, 100)
+    } else {
+
+        setInterval(jogo, 80)
+    }
 
     //velocidade do jogo
     const vel = 1
@@ -39,6 +44,9 @@ window.onload = function iniciar() {
     //tamanho da cobra
     var trilha = [];
     corpo = 5
+
+    //localizar a tag h2 pontuação
+    const p = document.getElementById('pontuacao')
 
     function jogo() {
         px += vx
@@ -66,7 +74,7 @@ window.onload = function iniciar() {
         //pintar a cobra
         ctx.fillStyle = "green"
         for (var i = 0; i < trilha.length; i++) {
-            ctx.fillRect(trilha[i].x * tp, trilha[i].y * tp, tp , tp)
+            ctx.fillRect(trilha[i].x * tp, trilha[i].y * tp, tp, tp)
             //se o corpo se toca reinicia o jogo
             if (trilha[i].x == px && trilha[i].y == py) {
                 corpo = 5
@@ -81,6 +89,8 @@ window.onload = function iniciar() {
         }
 
         if (ax == px && ay == py) {
+           
+            p.innerText =  `Pontuação: ${corpo - 4}`
             corpo++
             ax = Math.floor(Math.random() * qp)
             ay = Math.floor(Math.random() * qp)
