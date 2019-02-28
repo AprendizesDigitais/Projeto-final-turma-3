@@ -2,6 +2,7 @@ window.onload = function iniciar() {
 
     // difinir qual elemento html contem a tela
     var tela = document.getElementById('tela')
+
     // ctx = contexto
     var ctx = tela.getContext("2d")
 
@@ -24,7 +25,7 @@ window.onload = function iniciar() {
     var vx = vy = 0
 
     // tamanho do pixel
-    var tp = 30
+    var tp = 15
 
     // quantidade de pessas
     var qp = 20
