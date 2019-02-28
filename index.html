@@ -26,6 +26,13 @@
         </div>
         <input id="b" class="vertical" type="button" value=" \/ ">
     </section>
+    <button id="goFS">Tela cheia</button>
+    <script>
+        var goFS = document.getElementById("goFS");
+        goFS.addEventListener("click", function () {
+            document.body.requestFullscreen();
+        }, false);
+    </script>
 </body>
 
 </html>
