@@ -6,17 +6,11 @@ window.onload = function iniciar() {
     // ctx = contexto
     var ctx = tela.getContext("2d")
 
-    //click do botão para mobile
-    document.getElementById('e').addEventListener('click', e)
-    document.getElementById('c').addEventListener('click', c)
-    document.getElementById('d').addEventListener('click', d)
-    document.getElementById('b').addEventListener('click', b)
-
     //buscar pelo presionar da tecla
     document.addEventListener("keydown", keyPush)
 
     // executa a função a cada 80 mms
-    if (screen.width < 400) {
+    if (screen.width < 600) {
         setInterval(jogo, 200)
     } else {
 
@@ -131,6 +125,7 @@ window.onload = function iniciar() {
 
     var el = document.getElementById('tela');
     swipedetect(el, function (swipedir) {
+        document.getElementById('dire').innerText = swipedir
         switch (swipedir) {
             case 'left':
                 if (vx != vel) {
