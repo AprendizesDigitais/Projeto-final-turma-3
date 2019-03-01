@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'VT323', monospace;
+}
+
+@font-face {
+    font-family: "My Custom Font";
+    src: url(http://www.example.org/mycustomfont.ttf) format("truetype");
+}
+
+body{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-image: url('./img/fundo1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top
+}
+
+h1{
+    margin: 5% 0;
+    color: white;
+    font-size: 6vw
+}
+
+h2{
+    color: white;
+    font-size: 3vw;
+}
+
+#tela{
+    margin: 2%
+}
+
+section{
+    display: none
+}
+
+@media only screen and (max-width: 450px){
+  
+body{
+    background-size: auto 100vh;
+}    
+
+h1{
+    font-size: 10vw;
+}
+
+section{
+    width: 100%;
+    height: auto;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5% 0;
+}
+
+.vertical{
+    width: 30vw;
+    height: 15vw
+}
+
+div{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.horizontal{
+    width: 15vw;
+    height: 20vw;
+}
+}
